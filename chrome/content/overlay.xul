@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://letsbuzz/skin/letsbuzz.css" type="text/css"?>
+<!DOCTYPE overlay SYSTEM "chrome://smartemoticons/locale/locale.dtd">
+<overlay id="letsbuzzOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+         
+  <script type="application/x-javascript" src="chrome://letsbuzz/content/letsbuzz.js" />
+ 	
+  <window id="convWindow">
+   <statusbar id="convWindow-statusbar">
+    <statusbarpanel id="smileystatusbar" 
+				    insertBefore="statusbar-display">
+					<toolbarbutton  id="toolbarlauncher" 
+									label="Hello"
+									accesskey="e" oncommand="hello();"/>
+    </statusbarpanel> 
+   </statusbar>    
+  </window>
+  
+  <popup id="contentAreaContextMenu">
+    <menuitem label="Buzz" 
+		      oncommand="letsbuzz();" 
+			  accesskey="z"
+	          insertafter="context-selectall"/>
+  </popup>
+	
+  <keyset>
+   <key id="attention-key" 
+        modifiers="alt" 
+		key="B" 
+		oncommand="letsbuzz();"/>
+   </keyset>
+</overlay>
